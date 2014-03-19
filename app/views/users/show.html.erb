@@ -11,9 +11,13 @@
 </p>
 
 <p>
+   <% if @user.tweets.empty? == true %>
+    No tweets yet
+  <% else %>
     <strong>All Tweets:</strong>
   <%= @user.tweets.each do |singletweet| %>
   <%= singletweet.status %>
+  <% end %>
   <% end %>
 </p>
 
